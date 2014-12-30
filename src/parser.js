@@ -56,13 +56,13 @@ glam.parser = {
 		return glam.getStyle(selector);
 	},
 	
-	parseDocument : function()
+	parseDocument : function(doctoparse)
 	{
 		var dp = new DOMParser;
 
 		var i, len;
 		
-		var docs = document.getElementsByTagName("glam");
+		var docs = doctoparse.getElementsByTagName("glam");
 		var len = docs.length;
 		for (i = 0; i < len; i++)
 		{

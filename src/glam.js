@@ -16,16 +16,16 @@ glam = {
 
 		viewers : {},
 
-		animations : {},
+		animations : {}
 		
 };
 
 glam.isReady = false;
-glam.ready = function() {
+glam.ready = function(doc) {
 	if (glam.isReady)
 		return;
 	
-	glam.parser.parseDocument();
+	glam.parser.parseDocument(doc);
 	glam.createViewers();
 	
 	glam.isReady = true;
@@ -63,10 +63,4 @@ glam.getAnimation = function(id) {
 glam.setFullScreen = function(enable) {
 	return Vizi.Graphics.instance.setFullScreen(enable);
 }
-
-$(document).ready(function(){
-
-	glam.ready();
-});
-
 
