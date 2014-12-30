@@ -186,6 +186,7 @@ glam.Material.parseStyle = function(style) {
 glam.Material.parseUrl = function(image) {
 	var regExp = /\(([^)]+)\)/;
 	var matches = regExp.exec(image);
+	image = image.replace(/'/g, "");
 	image = matches[1];
 	return image;
 }
