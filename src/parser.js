@@ -75,8 +75,9 @@ glam.parser = {
 			doc.style.display = 'none';
 			glam.parser.addEventHandlers(doc);
 		}
-		
-		var styles = document.head.getElementsByTagName("style");
+
+		// todo: not working for linked/external stylesheets (except in Polymer for some reason)
+		var styles = doctoparse.getElementsByTagName("style"); // formerly document.head.... hopefully didn't screw anything up
 		var len = styles.length;
 		for (i = 0; i < len; i++)
 		{
