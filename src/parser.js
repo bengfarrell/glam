@@ -119,6 +119,6 @@ glam.parser = {
 			event.stopPropagation();
 		});
 		
-	},
+	}
 };
 
